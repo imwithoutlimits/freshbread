@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — FreshBread Publishing</title>
+<meta name="description" content="Get in touch with FreshBread Publishing.">
+<link rel="stylesheet" href="assets/style.css">
+
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="nav-logo" href="index.html"><span class="dot"></span>FreshBread Publishing</a>
+    <div class="nav-links">
+      <a class="mono" href="index.html">Home</a>
+<a class="mono" href="products.html">Products</a>
+<a class="mono" href="about.html">About</a>
+<a class="mono active" href="contact.html">Contact</a>
+
+      <a class="nav-cta" href="contact.html">Get in touch</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+
+<header class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Contact</div>
+    <h1>Talk to us.</h1>
+    <p class="sub">Questions about a plugin, billing, or a consulting engagement — we read every message ourselves.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap contact-grid">
+    <div>
+      <div class="contact-card">
+        <div class="mono">Email</div>
+        <p><a href="mailto:support@freshbreadpublishing.com">support@freshbreadpublishing.com</a></p>
+      </div>
+      <div class="contact-card">
+        <div class="mono">Response time</div>
+        <p>Within 1–2 business days</p>
+      </div>
+      <div class="contact-card">
+        <div class="mono">Social</div>
+        <p>@FreshBreadCo on Twitter / X, Instagram, and YouTube</p>
+      </div>
+    </div>
+    <form id="contactForm" class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="https://freshbreadpublishing.netlify.app/thank-you.html">
+      <input type="hidden" name="form-name" value="contact">
+      <p style="position:absolute;left:-9999px;">
+        <label>Don't fill this out if you're human: <input name="bot-field"></label>
+      </p>
+      <label>Name</label>
+      <input type="text" name="name" required>
+      <label>Email</label>
+      <input type="email" name="email" required>
+      <label>Message</label>
+      <textarea name="message" required placeholder="Tell us what you need help with..."></textarea>
+      <button class="btn btn-primary" type="submit" style="align-self:flex-start;">Send message</button>
+      <p id="formStatus" class="mono" style="font-size:12px;color:var(--mute);display:none;"></p>
+    </form>
+  </div>
+</section>
+
+<script>
+// Sends this form's data to the Netlify-hosted backend in the background,
+// so visitors on GitHub Pages (or any non-Netlify host) never leave this domain.
+// NETLIFY_FORM_ENDPOINT must be a Netlify site that has this same form
+// (matching name + fields) in its deployed HTML, so Netlify's forms bot has
+// registered it. That site does not need to be the live public site.
+(function () {
+  var NETLIFY_FORM_ENDPOINT = 'https://freshbreadpublishing.netlify.app/';
+  var form = document.getElementById('contactForm');
+  var status = document.getElementById('formStatus');
+  if (!form) return;
+
+  // Only intercept when JS runs; otherwise the form's normal action/method
+  // above still works as a plain HTML POST straight to Netlify.
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    status.style.display = 'block';
+    status.textContent = 'Sending...';
+
+    var data = new URLSearchParams(new FormData(form)).toString();
+
+    fetch(NETLIFY_FORM_ENDPOINT, {
+      method: 'POST',
+      mode: 'no-cors', // fire-and-forget: we can't read the response cross-domain, and don't need to
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: data
+    }).then(function () {
+      window.location.href = 'thank-you.html';
+    }).catch(function () {
+      status.textContent = "Something went wrong sending that — please email support@freshbreadpublishing.com directly.";
+    });
+  });
+})();
+</script>
+
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><span class="dot"></span>FreshBread Publishing</div>
+        <p class="foot-desc">Software automation tools, digital resources, and publishing solutions for creators and businesses.</p>
+        <p class="foot-desc" style="margin-top:14px;">support@freshbreadpublishing.com</p>
+      </div>
+      <div>
+        <h5>Products</h5>
+        <ul>
+          <li><a href="plugins/vaultmind.html">VaultMind AI</a></li>
+<li><a href="plugins/linkhealer.html">LinkHealer AI</a></li>
+<li><a href="plugins/knosearch.html">KnoSearch AI</a></li>
+<li><a href="plugins/eventmind.html">EventMind AI</a></li>
+<li><a href="plugins/documind.html">DocuMind AI</a></li>
+<li><a href="plugins/recipemind.html">RecipeMind AI</a></li>
+<li><a href="plugins/affiliatemind.html">AffiliateMind AI</a></li>
+<li><a href="plugins/tablemind.html">TableMind AI</a></li>
+<li><a href="plugins/trustmind.html">TrustMind AI</a></li>
+<li><a href="plugins/couponmind.html">CouponMind AI</a></li>
+<li><a href="plugins/visiontag.html">VisionTag AI</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="refund.html">Refund Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 FreshBread Publishing. All rights reserved.</span>
+      <div class="socials">
+        <a href="https://twitter.com/FreshBreadCo" target="_blank" rel="noopener">Twitter / X</a>
+        <a href="https://instagram.com/FreshBreadCo" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://youtube.com/@FreshBreadCo" target="_blank" rel="noopener">YouTube</a>
+      </div>
+      <span>14-day money-back guarantee on all software subscriptions.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
