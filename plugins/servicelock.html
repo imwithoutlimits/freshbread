@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ServiceLock — FreshBread Publishing</title>
+<meta name="description" content="ServiceLock lets an AI agent search live openings, hold a slot, and confirm a deposit-backed booking with a real provider — over REST or MCP — in a search → hold → confirm flow built for how agent platforms actually place bookings.">
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="nav-logo" href="../index.html"><span class="dot"></span>FreshBread Publishing</a>
+    <div class="nav-links">
+      <a class="mono" href="../index.html">Home</a>
+<a class="mono active" href="../products.html">Products</a>
+<a class="mono" href="../products.html#apps">Apps</a>
+<a class="mono" href="../about.html">About</a>
+<a class="mono" href="../contact.html">Contact</a>
+
+      <a class="nav-cta" href="../contact.html">Get in touch</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+
+<header class="page-hero">
+  <div class="wrap">
+    <div class="status-tag"><span class="dot"></span>HOSTED API &middot; AI AGENT BOOKING API · REST + MCP</div>
+    <h1 style="margin-top:22px;">ServiceLock</h1>
+    <p class="sub">ServiceLock lets an AI agent search live openings, hold a slot, and confirm a deposit-backed booking with a real provider — over REST or MCP — in a search → hold → confirm flow built for how agent platforms actually place bookings.</p>
+    <div class="cta-row" style="margin-top:34px;">
+      <a class="btn btn-primary" href="#pricing">See pricing</a>
+      <a class="btn btn-ghost-dark" href="../contact.html">Ask a question</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>How it works</h2>
+      <p>A hosted booking API that lets AI agents search real-time availability, hold a slot, and confirm a deposit-backed appointment with a home-service provider — over REST or MCP. Priced per location, with a small success fee on top.</p>
+    </div>
+    
+<div class="feature-row">
+  <div><span class="num">01</span></div>
+  <div><h3>Built for how agents book, not how humans browse</h3><p>search_service_slots, hold_appointment_slot, and confirm_deposit_booking are exposed as both REST endpoints and native MCP tools, so an agent can complete a booking without a human clicking through a calendar.</p></div>
+</div>
+
+<div class="feature-row">
+  <div><span class="num">02</span></div>
+  <div><h3>Never double-books, never double-charges</h3><p>Each booking runs as a resumable, idempotent saga — the deposit is authorized, the slot is re-verified against the provider's live calendar, and only then captured. A failure at any step voids the charge and releases the slot automatically.</p></div>
+</div>
+
+<div class="feature-row">
+  <div><span class="num">03</span></div>
+  <div><h3>Disclosed, bounded sponsored placement</h3><p>A provider on the Enterprise plan can pay for placement, but it only breaks ties among results within 30 minutes of the soonest slot — and every such result is labeled sponsored, so urgency is never sacrificed for revenue.</p></div>
+</div>
+
+  </div>
+</section>
+
+
+<section class="section-fog" id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Pricing</h2>
+      <p>Priced per location. Upgrade as your booking volume grows.</p>
+    </div>
+    <div class="tiers">
+      
+<div class="tier">
+  <h4>Starter</h4>
+  <div class="price">$99<span> /mo</span></div>
+  <ul><li>Up to 30 agent-initiated holds / month</li>
+<li>Real-time slot search, hold & confirm (REST + MCP)</li>
+<li>Deposit collected via Stripe, paid straight to you</li>
+<li>Standard placement in agent search results</li></ul>
+  <a class="btn btn-ghost-light" href="../contact.html">Subscribe to Starter</a>
+</div>
+
+      
+<div class="tier featured">
+  <h4>Pro</h4>
+  <div class="price">$249<span> /mo</span></div>
+  <ul><li>Unlimited agent-initiated holds</li>
+<li>SMS dispatch to your on-call technician on every confirmed booking</li>
+<li>Everything in Starter</li></ul>
+  <a class="btn btn-primary" href="../contact.html">Subscribe to Pro</a>
+</div>
+
+      
+<div class="tier">
+  <h4>Enterprise</h4>
+  <div class="price">$499<span> /mo</span></div>
+  <ul><li>Priority (sponsored) placement, always disclosed</li>
+<li>Bounded to results within 30 minutes of the soonest slot</li>
+<li>Everything in Pro</li></ul>
+  <a class="btn btn-ghost-light" href="../contact.html">Subscribe to Enterprise</a>
+</div>
+
+    </div>
+    <p class="mono" style="margin-top:22px;color:var(--mute);font-size:12px;">Per location, per month. Plus a $15–$45 success fee per confirmed booking, charged to you only when a deposit is actually captured — never on a cancelled or failed booking. Your customer's deposit is paid straight to you via Stripe; the success fee is separate.</p>
+  </div>
+</section>
+
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Explore the rest of the suite</h2>
+      <p>ServiceLock is one of 13 focused tools — each solves one problem well.</p>
+    </div>
+    <div class="grid-4 cols-3">
+      
+<a class="product-card" href="../plugins/vaultmind.html">
+  <div class="mark">VM</div>
+  <div>
+    <div class="role">Gated Content & Lead Scoring</div>
+    <h3>VaultMind AI</h3>
+  </div>
+  <p class="desc">Reads and summarizes every file you upload, then personalizes and watermarks each download for the person requesting it. Visitors are scored before they get the link.</p>
+  <div class="foot">
+    <span class="price-badge mono">$19–$49/mo</span>
+    <span class="arrow">View plugin &rarr;</span>
+  </div>
+</a>
+
+<a class="product-card" href="../plugins/linkhealer.html">
+  <div class="mark">LH</div>
+  <div>
+    <div class="role">Broken Link Monitoring & Repair</div>
+    <h3>LinkHealer AI</h3>
+  </div>
+  <p class="desc">Quietly checks every link on your site in the background and repairs the ones that break — pulling replacements from the Wayback Machine and flagging affiliate links for your review.</p>
+  <div class="foot">
+    <span class="price-badge mono">$15–$39/mo</span>
+    <span class="arrow">View plugin &rarr;</span>
+  </div>
+</a>
+
+<a class="product-card" href="../plugins/knosearch.html">
+  <div class="mark">KS</div>
+  <div>
+    <div class="role">Semantic Site Search</div>
+    <h3>KnoSearch AI</h3>
+  </div>
+  <p class="desc">Combines keyword and meaning-based search so visitors find the right page even when they don't use your exact wording — with an optional AI answer box on top.</p>
+  <div class="foot">
+    <span class="price-badge mono">$29–$79/mo</span>
+    <span class="arrow">View plugin &rarr;</span>
+  </div>
+</a>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Talk to us about piloting ServiceLock.</h2><p>Priced per location — let's find the right plan for your first one.</p><div class='cta-row'><a class='btn btn-primary' href='../contact.html'>Get started</a></div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><span class="dot"></span>FreshBread Publishing</div>
+        <p class="foot-desc">Software automation tools, digital resources, and publishing solutions for creators and businesses.</p>
+        <p class="foot-desc" style="margin-top:14px;">FreshBread Publishing is a subsidiary of Lehem Network.</p>
+        <p class="foot-desc" style="margin-top:14px;"><a href="mailto:yomi@lehemnetwork.org">yomi@lehemnetwork.org</a></p>
+      </div>
+      <div>
+        <h5>Products</h5>
+        <ul>
+          <li><a href="../apps/earshelf.html">Earshelf (app)</a></li>
+<li><a href="../apps/tapestry.html">Tapestry (app)</a></li>
+<li><a href="../plugins/vaultmind.html">VaultMind AI</a></li>
+<li><a href="../plugins/linkhealer.html">LinkHealer AI</a></li>
+<li><a href="../plugins/knosearch.html">KnoSearch AI</a></li>
+<li><a href="../plugins/eventmind.html">EventMind AI</a></li>
+<li><a href="../plugins/documind.html">DocuMind AI</a></li>
+<li><a href="../plugins/recipemind.html">RecipeMind AI</a></li>
+<li><a href="../plugins/affiliatemind.html">AffiliateMind AI</a></li>
+<li><a href="../plugins/tablemind.html">TableMind AI</a></li>
+<li><a href="../plugins/trustmind.html">TrustMind AI</a></li>
+<li><a href="../plugins/couponmind.html">CouponMind AI</a></li>
+<li><a href="../plugins/visiontag.html">VisionTag AI</a></li>
+<li><a href="../plugins/agentbridge.html">AgentBridge AI</a></li>
+<li><a href="../plugins/servicelock.html">ServiceLock</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../products.html">Products</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="../privacy.html">Privacy Policy</a></li>
+          <li><a href="../terms.html">Terms of Service</a></li>
+          <li><a href="../refund.html">Refund Policy</a></li>
+          <li><a href="../acceptable-use.html">Acceptable Use &amp; AI Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 FreshBread Publishing, a subsidiary of Lehem Network. All rights reserved.</span>
+      <div class="socials">
+        <a href="https://twitter.com/FreshBreadCo" target="_blank" rel="noopener">Twitter / X</a>
+        <a href="https://instagram.com/FreshBreadCo" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://youtube.com/@FreshBreadCo" target="_blank" rel="noopener">YouTube</a>
+      </div>
+      <span>14-day money-back guarantee on all software subscriptions.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/main.js"></script>
+</body>
+</html>
