@@ -16,6 +16,7 @@
     <div class="nav-links">
       <a class="mono" href="index.html">Home</a>
 <a class="mono" href="products.html">Products</a>
+<a class="mono" href="products.html#apps">Apps</a>
 <a class="mono" href="about.html">About</a>
 <a class="mono active" href="contact.html">Contact</a>
 
@@ -38,8 +39,12 @@
   <div class="wrap contact-grid">
     <div>
       <div class="contact-card">
+        <div class="mono">Company</div>
+        <p>FreshBread Publishing, a subsidiary of Lehem Network</p>
+      </div>
+      <div class="contact-card">
         <div class="mono">Email</div>
-        <p><a href="mailto:support@freshbreadpublishing.com">support@freshbreadpublishing.com</a></p>
+        <p><a href="mailto:yomi@lehemnetwork.org">yomi@lehemnetwork.org</a></p>
       </div>
       <div class="contact-card">
         <div class="mono">Response time</div>
@@ -50,7 +55,7 @@
         <p>@FreshBreadCo on Twitter / X, Instagram, and YouTube</p>
       </div>
     </div>
-    <form id="contactForm" class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="https://freshbreadpublishing.netlify.app/thank-you.html">
+    <form id="contactForm" class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="https://apps.lehemnetwork.org/thank-you.html">
       <input type="hidden" name="form-name" value="contact">
       <p style="position:absolute;left:-9999px;">
         <label>Don't fill this out if you're human: <input name="bot-field"></label>
@@ -68,35 +73,25 @@
 </section>
 
 <script>
-// Sends this form's data to the Netlify-hosted backend in the background,
-// so visitors on GitHub Pages (or any non-Netlify host) never leave this domain.
-// NETLIFY_FORM_ENDPOINT must be a Netlify site that has this same form
-// (matching name + fields) in its deployed HTML, so Netlify's forms bot has
-// registered it. That site does not need to be the live public site.
 (function () {
-  var NETLIFY_FORM_ENDPOINT = 'https://freshbreadpublishing.netlify.app/';
+  var NETLIFY_FORM_ENDPOINT = 'https://apps.lehemnetwork.org/';
   var form = document.getElementById('contactForm');
   var status = document.getElementById('formStatus');
   if (!form) return;
-
-  // Only intercept when JS runs; otherwise the form's normal action/method
-  // above still works as a plain HTML POST straight to Netlify.
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     status.style.display = 'block';
     status.textContent = 'Sending...';
-
     var data = new URLSearchParams(new FormData(form)).toString();
-
     fetch(NETLIFY_FORM_ENDPOINT, {
       method: 'POST',
-      mode: 'no-cors', // fire-and-forget: we can't read the response cross-domain, and don't need to
+      mode: 'no-cors',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: data
     }).then(function () {
       window.location.href = 'thank-you.html';
     }).catch(function () {
-      status.textContent = "Something went wrong sending that — please email support@freshbreadpublishing.com directly.";
+      status.textContent = "Something went wrong sending that — please email yomi@lehemnetwork.org directly.";
     });
   });
 })();
@@ -109,12 +104,15 @@
       <div>
         <div class="foot-brand"><span class="dot"></span>FreshBread Publishing</div>
         <p class="foot-desc">Software automation tools, digital resources, and publishing solutions for creators and businesses.</p>
-        <p class="foot-desc" style="margin-top:14px;">support@freshbreadpublishing.com</p>
+        <p class="foot-desc" style="margin-top:14px;">FreshBread Publishing is a subsidiary of Lehem Network.</p>
+        <p class="foot-desc" style="margin-top:14px;"><a href="mailto:yomi@lehemnetwork.org">yomi@lehemnetwork.org</a></p>
       </div>
       <div>
         <h5>Products</h5>
         <ul>
-          <li><a href="plugins/vaultmind.html">VaultMind AI</a></li>
+          <li><a href="apps/earshelf.html">Earshelf (app)</a></li>
+<li><a href="apps/tapestry.html">Tapestry (app)</a></li>
+<li><a href="plugins/vaultmind.html">VaultMind AI</a></li>
 <li><a href="plugins/linkhealer.html">LinkHealer AI</a></li>
 <li><a href="plugins/knosearch.html">KnoSearch AI</a></li>
 <li><a href="plugins/eventmind.html">EventMind AI</a></li>
@@ -125,6 +123,8 @@
 <li><a href="plugins/trustmind.html">TrustMind AI</a></li>
 <li><a href="plugins/couponmind.html">CouponMind AI</a></li>
 <li><a href="plugins/visiontag.html">VisionTag AI</a></li>
+<li><a href="plugins/agentbridge.html">AgentBridge AI</a></li>
+<li><a href="plugins/servicelock.html">ServiceLock</a></li>
         </ul>
       </div>
       <div>
@@ -141,11 +141,12 @@
           <li><a href="privacy.html">Privacy Policy</a></li>
           <li><a href="terms.html">Terms of Service</a></li>
           <li><a href="refund.html">Refund Policy</a></li>
+          <li><a href="acceptable-use.html">Acceptable Use &amp; AI Policy</a></li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>&copy; 2026 FreshBread Publishing. All rights reserved.</span>
+      <span>&copy; 2026 FreshBread Publishing, a subsidiary of Lehem Network. All rights reserved.</span>
       <div class="socials">
         <a href="https://twitter.com/FreshBreadCo" target="_blank" rel="noopener">Twitter / X</a>
         <a href="https://instagram.com/FreshBreadCo" target="_blank" rel="noopener">Instagram</a>
